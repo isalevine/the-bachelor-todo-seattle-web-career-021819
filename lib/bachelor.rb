@@ -45,7 +45,7 @@ end
 def get_occupation(data, hometown)
   contestant_hash = data
   occupation_output = ""
-  until name_output != ""
+  until occupation_output != ""
     contestant_hash.each_value do |contestant_array|
       contestant_array.each do |person_hash|
         if person_hash["hometown"] == hometown
