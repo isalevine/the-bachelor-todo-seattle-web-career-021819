@@ -33,7 +33,7 @@ def count_contestants_by_hometown(data, hometown)
   counter = 0
   contestant_hash = data
   contestant_hash.each_value do |contestant_array|
-    contest_array.each do |person_hash|
+    contestant_array.each do |person_hash|
       if person_hash["hometown"] == hometown
         counter += 1
       end
