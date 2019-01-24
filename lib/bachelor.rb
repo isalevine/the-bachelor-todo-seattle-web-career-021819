@@ -59,5 +59,15 @@ end
 
 def get_average_age_for_season(data, season)
   average_age = 0.0
-
+  age_array = []
+  contestant_hash = data
+  contestant_hash.each do |season_key, contestant_array|
+    if season == season_key
+      contestant_array.each do |person_hash|
+        age_array << person_hash["age"].to_f
+      end
+    end
+  end
+  average_age = age_array.inject { |sum, n| sum + n }
+  average_age
 end
