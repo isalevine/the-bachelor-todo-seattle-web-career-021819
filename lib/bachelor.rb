@@ -44,17 +44,17 @@ end
 
 def get_occupation(data, hometown)
   contestant_hash = data
-  name_output = ""
+  occupation_output = ""
   until name_output != ""
     contestant_hash.each_value do |contestant_array|
       contestant_array.each do |person_hash|
         if person_hash["hometown"] == hometown
-          name_output = person_hash["name"]
+          occupation_output = person_hash["occupation"]
         end
       end
     end
   end
-  name_output
+  occupation_output
 end
 
 def get_average_age_for_season(data, season)
